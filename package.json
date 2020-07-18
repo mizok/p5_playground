@@ -1,7 +1,7 @@
 {
-  "name": "project_template",
+  "name": "p5_playground",
   "version": "1.0.0",
-  "description": "presentation_template",
+  "description": "p5_playground",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,28 +10,28 @@
     "dev": "webpack-dev-server --config webpack.config.js"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mizok/project_template_v2.git"
+    "type": "git"
   },
-  "author": "NEUX.CO",
+  "author": "Mizok",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mizok/project_template_v2/issues"
-  },
-  "homepage": "https://github.com/mizok/project_template_v2#readme",
+  "bugs": {},
   "dependencies": {
-    "@neux/ui-jquery": "0.0.2",
+    "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
+    "p5": "^1.0.0",
     "rxjs": "^6.5.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "autoprefixer": "^9.8.0",
+    "postcss-loader": "^3.0.0",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.5.3",
     "eslint": "^7.2.0",
+    "core-js": "^3.6.5",
     "fibers": "^5.0.0",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",

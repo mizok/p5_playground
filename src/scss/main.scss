@@ -1,9 +1,6 @@
 @charset 'UTF-8';
 
-
-// 1. Import @neux/ui-jquery 
-@import '~@neux/ui-jquery/scss/main/main';
-
+@import '~bootstrap/scss/bootstrap.scss';
 
 // 2. Configuration and helpers
 @import 'abstracts/variables',

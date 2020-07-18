@@ -2,4 +2,7 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
-@include reset();
+
+body {
+  font-size: 0;
+}

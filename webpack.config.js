@@ -45,11 +45,33 @@ module.exports = {
         ]
       },
       {
-        test: /.scss$/,
+        test: /\.s[ac]ss$/i,
         use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader'
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+            }
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              ident: 'postcss',
+              sourceMap: 'inline',
+              plugins: [
+                require('autoprefixer')
+              ]
+            }
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true
+            }
+          }
         ]
       },
       {
@@ -58,7 +80,12 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: [
+              ['@babel/preset-env', {
+                "useBuiltIns": "usage",
+                "corejs": 3
+              }]
+            ],
           }
         }
       },
@@ -91,7 +118,7 @@ module.exports = {
       filename: 'index.html',
       template: 'index.html',
       chunks: ['main'],
-      favicon: 'src/assets/images/logo.png'
+      favicon: 'src/assets/images/default-logo.png'
     }),
     ...templatePlugin,
 
